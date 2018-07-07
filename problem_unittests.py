@@ -63,6 +63,7 @@ def test_one_hot_encode(one_hot_encode):
     labels = [test_pairs[test_i][0] for test_i in test_indices]
     enc_labels = np.array([test_pairs[test_i][1] for test_i in test_indices])
     new_enc_labels = one_hot_encode(labels)
+    print(new_enc_labels.shape)
 
     assert np.array_equal(enc_labels, new_enc_labels),\
         'Encodings returned different results for the same numbers.\n' \
